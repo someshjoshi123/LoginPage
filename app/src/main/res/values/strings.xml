@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">LoginPage</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="register">REGISTER</string>
+    <string name="cancel">CANCEL</string>
+    <string name="login">LOGIN</string>
+    <string name="register_if_new">REGISTER IF NEW</string>
+    <string name="welcome">WELCOME!</string>
+    <string name="logout">Logout</string>
+    <string name="wl_email">Email:</string>
+    <string name="wl_first_name">First Name:</string>
+    <string name="wl_last_name">Last Name:</string>
+</resources>
