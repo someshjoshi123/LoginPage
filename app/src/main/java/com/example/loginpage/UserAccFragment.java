@@ -1,19 +1,23 @@
 package com.example.loginpage;
 
-import androidx.appcompat.app.AppCompatActivity;
+import static android.content.Context.MODE_PRIVATE;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class WelcomeActivity extends AppCompatActivity {
+public class UserAccFragment extends Fragment {
 
     TextView welcome, message, wl_fName, wl_lName, wl_gender, wl_email, wl_et_fName, wl_et_lName, wl_et_gender, wl_et_email;
     Button wl_btn_logout;
@@ -22,25 +26,39 @@ public class WelcomeActivity extends AppCompatActivity {
 
     private static final String KEY_EMAIL = "e_mail";
 
+    public UserAccFragment() {
+        // Required empty public constructor
+    }
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.welcome);
 
-        welcome = findViewById(R.id.welcome);
-        message = findViewById(R.id.message);
-        wl_image = findViewById(R.id.wl_image);
-        wl_fName = findViewById(R.id.wl_fName);
-        wl_lName = findViewById(R.id.wl_lName);
-        wl_gender = findViewById(R.id.wl_gender);
-        wl_email = findViewById(R.id.wl_email);
-        wl_et_fName = findViewById(R.id.wl_et_fName);
-        wl_et_lName = findViewById(R.id.wl_et_lName);
-        wl_et_gender = findViewById(R.id.wl_et_gender);
-        wl_et_email = findViewById(R.id.wl_et_email);
-        wl_btn_logout = findViewById(R.id.wl_btn_logout);
 
-        sp = getSharedPreferences("LoginData", MODE_PRIVATE);
+
+
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View v = inflater.inflate(R.layout.fragment_user_acc, container, false);
+
+        message = v.findViewById(R.id.message);
+        welcome = v.findViewById(R.id.welcome);
+        wl_image = v.findViewById(R.id.wl_image);
+        wl_fName = v.findViewById(R.id.wl_fName);
+        wl_lName = v.findViewById(R.id.wl_lName);
+        wl_gender = v.findViewById(R.id.wl_gender);
+        wl_email = v.findViewById(R.id.wl_email);
+        wl_et_fName = v.findViewById(R.id.wl_et_fName);
+        wl_et_lName = v.findViewById(R.id.wl_et_lName);
+        wl_et_gender = v.findViewById(R.id.wl_et_gender);
+        wl_et_email = v.findViewById(R.id.wl_et_email);
+        wl_btn_logout = v.findViewById(R.id.wl_btn_logout);
+
+        SharedPreferences sp = getContext().getSharedPreferences("LoginData", MODE_PRIVATE);
 
         String email = sp.getString(KEY_EMAIL, null);
 
@@ -48,7 +66,7 @@ public class WelcomeActivity extends AppCompatActivity {
             message.setText(email);
         }
 
-        DBHelper dbHelper = new DBHelper(getApplicationContext());
+        DBHelper dbHelper = new DBHelper(getContext());
         SQLiteDatabase db = dbHelper.getReadableDatabase();
 
         Cursor userData = db.rawQuery("select * from users where email LIKE '" + email + "'", null);
@@ -69,10 +87,11 @@ public class WelcomeActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = sp.edit();
                 editor.clear();
                 editor.commit();
-                finish();
-                Intent i = new Intent(WelcomeActivity.this, MainActivity.class);
-                startActivity(i);
+                startActivity(new Intent(getContext(), MainActivity.class));
+                getActivity().finish();
             }
         });
+
+        return v;
     }
 }
