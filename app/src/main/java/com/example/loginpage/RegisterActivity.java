@@ -5,14 +5,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.nio.charset.StandardCharsets;
+
 public class RegisterActivity extends AppCompatActivity {
 
     Button btn_reg, btn_cancel;
+    TextView tv_gender;
+    String gend_er = "";
+    RadioGroup genderGrp;
+    RadioButton g_male, g_female;
     EditText et_firstName, et_lastName, et_email, et_pwd;
     DBHelper myDb;
 
@@ -21,6 +30,10 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
 
+        genderGrp = findViewById(R.id.genderGrp);
+        tv_gender = findViewById(R.id.tv_gender);
+        g_male = findViewById(R.id.g_male);
+        g_female = findViewById(R.id.g_female);
         et_firstName = findViewById(R.id.et_firstName);
         et_lastName = findViewById(R.id.et_lastName);
         et_email = findViewById(R.id.et_email);
@@ -40,6 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                 String firstname =  et_firstName.getText().toString();
                 String lastname =  et_lastName.getText().toString();
+                String gender = gend_er;
                 String email =  et_email.getText().toString();
                 String pwd =  et_pwd.getText().toString();
 
@@ -49,7 +63,7 @@ public class RegisterActivity extends AppCompatActivity {
                 else{
                     Boolean emailCheckResult =  myDb.checkemail(email);
                     if(emailCheckResult == false){
-                        Boolean regResult = myDb.insertData(firstname,lastname,email,pwd);
+                        Boolean regResult = myDb.insertData(firstname,lastname,gender,email,pwd);
                         if(regResult == true){
                             Toast.makeText(RegisterActivity.this, "Registration done successfully!", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent( RegisterActivity.this, MainActivity.class);
@@ -62,6 +76,17 @@ public class RegisterActivity extends AppCompatActivity {
                     else{
                         Toast.makeText(RegisterActivity.this, "User already exists.\n Please LOGIN!", Toast.LENGTH_SHORT).show();
                     }
+                }
+            }
+        });
+
+        genderGrp.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if(i==R.id.g_male){
+                    gend_er="Male";
+                }
+                else if(i==R.id.g_female){
+                    gend_er="Female";
                 }
             }
         });

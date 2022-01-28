@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 public class WelcomeActivity extends AppCompatActivity {
 
-    TextView welcome, message,wl_fName,wl_lName,wl_email, wl_et_fName, wl_et_lName, wl_et_email;
+    TextView welcome, message, wl_fName, wl_lName, wl_gender, wl_email, wl_et_fName, wl_et_lName, wl_et_gender, wl_et_email;
     Button wl_btn_logout;
     ImageView wl_image;
     SharedPreferences sp;
@@ -32,9 +32,11 @@ public class WelcomeActivity extends AppCompatActivity {
         wl_image = findViewById(R.id.wl_image);
         wl_fName = findViewById(R.id.wl_fName);
         wl_lName = findViewById(R.id.wl_lName);
+        wl_gender = findViewById(R.id.wl_gender);
         wl_email = findViewById(R.id.wl_email);
         wl_et_fName = findViewById(R.id.wl_et_fName);
         wl_et_lName = findViewById(R.id.wl_et_lName);
+        wl_et_gender = findViewById(R.id.wl_et_gender);
         wl_et_email = findViewById(R.id.wl_et_email);
         wl_btn_logout = findViewById(R.id.wl_btn_logout);
 
@@ -54,7 +56,8 @@ public class WelcomeActivity extends AppCompatActivity {
         do{
             wl_et_fName.setText(userData.getString(0));
             wl_et_lName.setText(userData.getString(1));
-            wl_et_email.setText(userData.getString(2));
+            wl_et_gender.setText(userData.getString(2));
+            wl_et_email.setText(userData.getString(3));
         }
         while(userData.moveToNext());
 

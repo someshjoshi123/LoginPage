@@ -63,13 +63,24 @@
         android:layout_marginLeft="25dp"/>
 
     <TextView
+        android:id="@+id/wl_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wl_gender"
+        android:textSize="25sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wl_lName"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="25dp"/>
+
+    <TextView
         android:id="@+id/wl_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/wl_email"
         android:textSize="25sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/wl_lName"
+        app:layout_constraintTop_toTopOf="@+id/wl_gender"
         android:layout_marginTop="60dp"
         android:layout_marginLeft="25dp"/>
 
@@ -82,8 +93,7 @@
         app:layout_constraintLeft_toRightOf="@+id/wl_fName"
         app:layout_constraintTop_toBottomOf="@+id/wl_image"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="10dp"
-        android:inputType="textPersonName"/>
+        android:layout_marginLeft="10dp"/>
 
     <TextView
         android:id="@+id/wl_et_lName"
@@ -94,8 +104,18 @@
         app:layout_constraintLeft_toRightOf="@+id/wl_lName"
         app:layout_constraintTop_toBottomOf="@+id/wl_et_fName"
         android:layout_marginTop="27dp"
-        android:layout_marginLeft="10dp"
-        android:inputType="textPersonName"/>
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/wl_et_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/wl_gender"
+        app:layout_constraintTop_toBottomOf="@+id/wl_lName"
+        android:layout_marginTop="26dp"
+        android:layout_marginLeft="10dp"/>
 
     <TextView
         android:id="@+id/wl_et_email"
@@ -104,10 +124,9 @@
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toRightOf="@+id/wl_email"
-        app:layout_constraintTop_toBottomOf="@+id/wl_et_lName"
+        app:layout_constraintTop_toBottomOf="@+id/wl_et_gender"
         android:layout_marginTop="27dp"
-        android:layout_marginLeft="10dp"
-        android:inputType="textEmailAddress" />
+        android:layout_marginLeft="10dp"/>
 
     <Button
         android:id="@+id/wl_btn_logout"
