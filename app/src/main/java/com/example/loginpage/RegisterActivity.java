@@ -81,7 +81,8 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
         genderGrp.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
                 if(i==R.id.g_male){
                     gend_er="Male";
                 }
