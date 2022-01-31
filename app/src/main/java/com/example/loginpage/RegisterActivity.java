@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import java.nio.charset.StandardCharsets;
 
@@ -24,11 +25,15 @@ public class RegisterActivity extends AppCompatActivity {
     RadioButton g_male, g_female;
     EditText et_firstName, et_lastName, et_email, et_pwd;
     DBHelper myDb;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         genderGrp = findViewById(R.id.genderGrp);
         tv_gender = findViewById(R.id.tv_gender);

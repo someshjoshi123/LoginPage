@@ -35,6 +35,8 @@ public class UserlistAdapter extends RecyclerView.Adapter<UserlistAdapter.Viewho
     public void onBindViewHolder(@NonNull UserlistAdapter.Viewholder holder, int position) {
         ModelClass modelClass = modelClasses.get(position);
         holder.pfp.setImageDrawable(context.getResources().getDrawable(R.drawable.user));
+        holder.fName.setText(modelClass.getfName());
+        holder.lName.setText(modelClass.getlName());
         holder.email.setText(modelClass.getEmail());
     }
 
@@ -47,12 +49,14 @@ public class UserlistAdapter extends RecyclerView.Adapter<UserlistAdapter.Viewho
     public class Viewholder extends RecyclerView.ViewHolder {
 
         ImageView pfp;
-        TextView email;
+        TextView fName, lName, email;
 
         public Viewholder(@NonNull View itemView) {
 
             super(itemView);
             pfp = itemView.findViewById(R.id.avatar);
+            fName = itemView.findViewById(R.id.tvv_fName);
+            lName = itemView.findViewById(R.id.tvv_lName);
             email = itemView.findViewById(R.id.tvv_email);
         }
     }

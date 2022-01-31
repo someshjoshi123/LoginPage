@@ -10,8 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:cardBackgroundColor="#FFFFFF"
-        app:cardElevation="10dp"
-        app:cardCornerRadius="10dp">
+        app:cardElevation="30dp"
+        app:cardCornerRadius="30dp"
+        android:layout_margin="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,21 +23,41 @@
                 android:id="@+id/avatar"
                 android:layout_width="65dp"
                 android:layout_height="65dp"
+                android:layout_gravity="center"
                 android:layout_margin="10dp"
                 android:src="@drawable/user"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:layout_weight="1">
 
                 <TextView
+                    android:id="@+id/tvv_fName"
+                    android:layout_width="310dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:text="First Name"
+                    android:textSize="25sp"/>
+
+                <TextView
+                    android:id="@+id/tvv_lName"
+                    android:layout_width="310dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:text="Last Name"
+                    android:textSize="25sp"/>
+
+                <TextView
                     android:id="@+id/tvv_email"
                     android:layout_width="310dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="2dp"
                     android:text="Email"
                     android:textSize="25sp" />
 
