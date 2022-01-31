@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         String email = sp.getString(KEY_EMAIL, null);
         if(email != null){
-            Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
+            Intent intent = new Intent(MainActivity.this, UserTabLayout.class);
             startActivity(intent);
         }
 
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                         SharedPreferences.Editor editor = sp.edit();
                         editor.putString(KEY_EMAIL,et_email.getText().toString());
                         editor.apply();
-                        Intent intent = new Intent(MainActivity.this, WelcomeActivity.class);
+                        Intent intent = new Intent(MainActivity.this, UserTabLayout.class);
                         startActivity(intent);
                     }
                     else{
