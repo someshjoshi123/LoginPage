@@ -5,6 +5,8 @@
         android:id="@+id/m_logout"
         android:title="Logout"/>
 
-
+    <item
+        android:id="@+id/m_btm_nav"
+        android:title="Bottom Navigation"/>
 
 </menu>

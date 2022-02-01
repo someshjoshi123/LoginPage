@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/somes/AndroidStudioProjects/LoginPage/app/src/main/res/drawable/user_card.xml" value="0.1695" />
+        <entry key="..\:/Users/somes/AndroidStudioProjects/LoginPage/app/src/main/res/layout/activity_bottom_nav.xml" value="0.25" />
         <entry key="..\:/Users/somes/AndroidStudioProjects/LoginPage/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
         <entry key="..\:/Users/somes/AndroidStudioProjects/LoginPage/app/src/main/res/layout/activity_user_tab_layout.xml" value="0.25" />
         <entry key="..\:/Users/somes/AndroidStudioProjects/LoginPage/app/src/main/res/layout/fragment_female_user.xml" value="0.25" />
@@ -14,6 +15,7 @@
         <entry key="..\:/Users/somes/AndroidStudioProjects/LoginPage/app/src/main/res/layout/toolbar.xml" value="0.25" />
         <entry key="..\:/Users/somes/AndroidStudioProjects/LoginPage/app/src/main/res/layout/user_item_list.xml" value="0.2" />
         <entry key="..\:/Users/somes/AndroidStudioProjects/LoginPage/app/src/main/res/layout/welcome.xml" value="0.25" />
+        <entry key="..\:/Users/somes/AndroidStudioProjects/LoginPage/app/src/main/res/menu/bottom_navbar.xml" value="0.25" />
         <entry key="..\:/Users/somes/AndroidStudioProjects/LoginPage/app/src/main/res/menu/main_menu.xml" value="0.25" />
       </map>
     </option>

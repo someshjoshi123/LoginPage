@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/btm_nav_maleusers"
+        android:icon="@drawable/man"
+        android:title="@string/male_users"/>
+
+    <item
+        android:id="@+id/btm_nav_femaleusers"
+        android:icon="@drawable/woman"
+        android:title="@string/female_users"/>
+
+    <item
+        android:id="@+id/btm_nav_useracc"
+        android:icon="@drawable/account"
+        android:title="@string/account"/>
+
+</menu>

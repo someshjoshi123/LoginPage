@@ -32,11 +32,17 @@ public class UserTabLayout extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
+
             case R.id.m_logout:
                 SharedPreferences sp = getApplicationContext().getSharedPreferences("LoginData", MODE_PRIVATE);
                 sp.edit().clear().commit();
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 finish();
+                return true;
+
+            case R.id.m_btm_nav:
+                Intent intent = new Intent(getApplicationContext(), BottomNav.class);
+                startActivity(intent);
                 return true;
 
             default:
@@ -48,8 +54,6 @@ public class UserTabLayout extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_tab_layout);
-
-
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

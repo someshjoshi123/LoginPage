@@ -28,4 +28,7 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="male_users">Male Users</string>
+    <string name="female_users">Female Users</string>
+    <string name="account">Account</string>
 </resources>
