@@ -1,10 +1,14 @@
-package com.example.loginpage;
+package com.example.loginpage.adapters;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+
+import com.example.loginpage.fragments.FemaleUserFragment;
+import com.example.loginpage.fragments.MaleUserFragment;
+import com.example.loginpage.fragments.UserAccFragment;
 
 public class FragmentAdapter extends FragmentStateAdapter {
 

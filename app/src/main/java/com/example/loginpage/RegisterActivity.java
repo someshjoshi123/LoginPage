@@ -14,7 +14,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import java.nio.charset.StandardCharsets;
+import com.example.loginpage.database.DBHelper;
 
 public class RegisterActivity extends AppCompatActivity {
 

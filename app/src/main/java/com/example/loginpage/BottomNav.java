@@ -8,6 +8,9 @@ import androidx.fragment.app.Fragment;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.loginpage.fragments.FemaleUserFragment;
+import com.example.loginpage.fragments.MaleUserFragment;
+import com.example.loginpage.fragments.UserAccFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 

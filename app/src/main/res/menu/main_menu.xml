@@ -3,10 +3,10 @@
 
     <item
         android:id="@+id/m_logout"
-        android:title="Logout"/>
+        android:title="@string/logout"/>
 
     <item
         android:id="@+id/m_btm_nav"
-        android:title="Bottom Navigation"/>
+        android:title="@string/bottom_navigation"/>
 
 </menu>

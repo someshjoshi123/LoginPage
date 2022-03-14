@@ -1,10 +1,12 @@
-package com.example.loginpage;
+package com.example.loginpage.database;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import com.example.loginpage.models.ModelClass;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.example.loginpage;
+package com.example.loginpage.models;
 
 public class ModelClass {
     private String gender;

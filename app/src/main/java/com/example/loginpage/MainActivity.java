@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.loginpage.database.DBHelper;
+
 public class MainActivity extends AppCompatActivity {
 
     Button btn_register, btn_login;
